@@ -1,6 +1,8 @@
 # 🕒 Timeout
 
 _A simple power-saving tool_
+This is a tool that automatically shuts down your computer after you've been in 
+lockscreen for too long. If you want to, you can also set a minimum time.
 
 ## 📚 Table of Contents
 
