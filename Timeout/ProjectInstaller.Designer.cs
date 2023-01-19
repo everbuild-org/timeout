@@ -40,7 +40,8 @@ namespace Timeout
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = "KBS Timeout";
+            this.serviceInstaller1.ServiceName = "Timeout";
+            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
