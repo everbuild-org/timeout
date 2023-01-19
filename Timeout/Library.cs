@@ -65,9 +65,8 @@ namespace Timeout
                 sw.Flush();
                 sw.Close();
             }
-            catch (Exception e)
+            catch
             {
-                WriteErrorLogN(e.Source.ToString().Trim() + "; " + e.Message.ToString().Trim());
             }
         }
 
@@ -76,21 +75,6 @@ namespace Timeout
             try
             {
                 StreamWriter sw = new StreamWriter(Environment.GetEnvironmentVariable("temp") + "\\TimeoutErrorLog.txt", true);
-                sw.WriteLine(DateTime.Now.ToString() + ": " + Message);
-                sw.Flush();
-                sw.Close();
-            }
-            catch(Exception e)
-            {
-                WriteErrorLogN(e.Source.ToString().Trim() + "; " + e.Message.ToString().Trim());
-            }
-        }
-
-        public static void WriteErrorLogN(string Message)
-        {
-            try
-            {
-                StreamWriter sw = new StreamWriter(AppContext.BaseDirectory + "\\TimeoutErrorLog.txt", true);
                 sw.WriteLine(DateTime.Now.ToString() + ": " + Message);
                 sw.Flush();
                 sw.Close();

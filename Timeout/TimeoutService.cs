@@ -39,6 +39,10 @@ namespace Timeout
         private void Tick(object sender, ElapsedEventArgs e)
         {
             _settings = Library.GetSettings();
+
+            var date = DateTime.Now;
+            if (_settings.ShutdownNotBeforeHours > date.Hour || _settings.ShutdownNotBeforeMinutes > date.Minute) return;
+            
             _locked = Process.GetProcessesByName("logonui").Length > 0;
 
             if (_locked)
