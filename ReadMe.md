@@ -77,3 +77,11 @@ For commercial support, please visit [stellarverse.de/products/timeout](https://
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## 🧑‍🦱 Credits
+
+This was made from and with [Goethe RobotX Jr](https://github.com/Goethe-RobotX-Jr)
+
+## 📜 Changelog
+
+- 1.0.0: Works
